@@ -19,6 +19,7 @@ app.use(helmet());
 app.use(cors());
 
 app.get('/', (req, res) => {
+  console.log(req.ip); //Testing the rate limiter trust proxy
   res.sendFile(__dirname + '/index.html');
 });
 

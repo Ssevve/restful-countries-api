@@ -13,7 +13,7 @@ const limiter = rateLimit({
 	legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 })
 
-app.set('trust proxy', 1);
+// app.set('trust proxy', 1);
 app.use(limiter);
 app.use(helmet());
 app.use(cors());
